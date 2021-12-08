@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="458.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="600.0" style="-fx-background-color: #1111;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="35.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnAddOnClick" prefHeight="30.0" prefWidth="65.0" style="-fx-border-radius: 20;" text="Incluir">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEdit" layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnEditOnClick" prefHeight="30.0" prefWidth="65.0" style="-fx-border-radius: 20;" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="203.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="30.0" prefWidth="65.0" style="-fx-border-radius: 20;" text="Excluir">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSave" layoutX="35.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnSaveOnClick" prefHeight="30.0" prefWidth="65.0" style="-fx-border-radius: 20;" text="Salvar" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnCancelOnClick" prefHeight="30.0" prefWidth="65.0" style="-fx-border-radius: 20;" text="Cancelar" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutY="58.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-style: solid; -fx-border-color: #4444;">
+         <children>
+            <TextField fx:id="txtNome" disable="true" layoutX="35.0" layoutY="33.0" prefHeight="35.0" prefWidth="530.0" promptText="Nome" />
+            <TextField fx:id="txtSobrenome" disable="true" layoutX="35.0" layoutY="98.0" prefHeight="35.0" prefWidth="530.0" promptText="Sobrenome" />
+            <Label layoutX="35.0" layoutY="78.0" prefHeight="17.0" prefWidth="81.0" text="Sobrenome" />
+            <Label layoutX="35.0" layoutY="12.0" prefHeight="17.0" prefWidth="55.0" text="Nome" />
+            <TextField fx:id="txtCodigo" layoutX="252.0" layoutY="38.0" promptText="Código" visible="false" />
+            <TableView fx:id="tblData" layoutX="35.0" layoutY="187.0" onMouseClicked="#tblDataOnClick" prefHeight="199.0" prefWidth="530.0">
+              <columns>
+                <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+                <TableColumn fx:id="colNome" prefWidth="224.0" text="Nome" />
+                  <TableColumn fx:id="colSobrenome" prefWidth="234.4000244140625" text="Sobrenome" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnRefresh" layoutX="35.0" layoutY="159.0" mnemonicParsing="false" onAction="#btnRefreshOnClick" prefHeight="18.0" prefWidth="66.0" style="-fx-border-radius: 20;" text="Atualizar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Label fx:id="lblAction" layoutX="484.0" layoutY="22.0" text="action" visible="false" />
+   </children>
+</AnchorPane>

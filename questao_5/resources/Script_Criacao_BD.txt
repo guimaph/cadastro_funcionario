@@ -1,0 +1,8 @@
+create database avaliacao;
+
+use avaliacao;
+
+create table funcionario
+	(fun_codigo int primary key auto_increment,
+	fun_nome varchar(100),
+    fun_sobrenome varchar(100));
